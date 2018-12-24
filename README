@@ -1,0 +1,56 @@
+*Purpose*
+This program is meant to emulate a biology lab using DNA sequences.
+The purpose of this program is to create a trie structure and run
+several functions that can insert, query, and remove sequences 
+in the trie. 
+A text file is inputted with requests starting with i, r, or s,
+each followed by a sequence. I is the "insert" command, r is the
+"remove" command, and s is the "search" command. As the file is
+read in, each command is executed and results are outputted.
+
+*Files provided*
+The files provided were main.cpp, Trie.cpp, Trie.h, README and makefile.
+
+main.cpp - main program
+Calls functions to create and run program.
+
+Makefile - file to compile and provide homework
+This file contains all directives needed to compile, run, and provide 
+this lab. It has targets, their dependencies, and commands to prepare
+the targets.
+
+Trie.cpp - Trie class file
+This file constructs a Tri structure to use in this program. 
+It has all function definitions including wrapper and private functions 
+that create the trie as well as insert and remove given sequences 
+from it.
+
+Trie.h - Trie header file
+Header file that outlines public and private variables for the
+Trie class. Also has a node structure that has nodes for a, t, c, g,
+as well as a marker for the end of the sequence inserted in the trie.
+
+*How to compile and run*
+To compile, type make.
+To run the program, type ./SeqMatch [INPUT TEXT] [OUTPUT TEXT].
+INPUT TEXT is the file containing the commands and sequences to be
+inserted, queried, and removed from the trie.
+OUTPUT TEXT is the file that it is written out to.
+
+*Outline of data structures and algorithms*
+In this project, I used a trie and traversal methods to insert, query
+and remove sequences from the trie. It was easy to move through
+the trie to do all these commands since it is organized by character.
+
+*Details of testing*
+I created a test file that created several strings and a structure
+of nodes and would call trie.insert(string 1) or trie.query(string2)
+etc. I unit tested each function, adding cerr statements in the case
+of segmentation faults or wrong outputs. I initially tested only
+a small file, but eventually tested many commands and sequences so
+I could check how my program worked for many things.
+I had a lot of trouble with the query function returning the 
+correct percent value. I drew out the trie to help visualize what was
+happening in the trie.
+I had trouble removing the sequences despite changing flags.
+
